@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Titan : MonoBehaviour
@@ -7,9 +8,10 @@ public class Titan : MonoBehaviour
     private Rigidbody rb;
     public Animator animator;
     private bool isWalking = true;
-
+    private EnemyHealth towerDamage;
     private void Start()
     {
+        towerDamage = towerTransform.GetComponent<EnemyHealth>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,18 +27,29 @@ public class Titan : MonoBehaviour
         Vector3 direction = (towerTransform.position - transform.position).normalized;
 
         // Применяем силу к Rigidbody, чтобы двигать врага
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        transform.localPosition += direction * moveSpeed * Time.deltaTime;
         
         // Опционально: вращаем врага в сторону игрока
         Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * moveSpeed);
+        transform.localRotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * moveSpeed);
     }
 
     public void Attak()
     {
         isWalking = false;
         animator.SetBool("Attack", true);
+        StartCoroutine(TimeAttak());
+    }
+
+    IEnumerator TimeAttak()
+    {
+        while(true)
+        {
+            towerDamage.TakeDamage(5);
+            yield return new WaitForSeconds(1.17f);
+        }
         
     }
+
 
 }

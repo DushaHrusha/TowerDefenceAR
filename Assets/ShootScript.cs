@@ -4,7 +4,7 @@ public class ShootScript : MonoBehaviour
 {
     public Camera arCamera;
     public Transform towerGunTransform;
-    private Transform towerTransform;
+    public Transform towerTransform;
     public float rotationSpeed;
     public float maxVerticalAngle; // Максимальный угол вертикального вращения
     public float minVerticalAngle; // Минимальный угол вертикального вращения
@@ -14,18 +14,14 @@ public class ShootScript : MonoBehaviour
     public Transform firePoint; // Точка, откуда будет происходить выстрел
     public float projectileSpeed = 20f; // Скорость снаряда
 
-    private void Start()
-    {
-        towerTransform = transform;
-    }
 
     private void Update()
     {
         MoveGun();
-        if (Input.GetMouseButtonDown(0)) // Проверяем, нажата ли левая кнопка мыши
-        {
-            Shoot();
-        }
+        //if (Input.GetMouseButtonDown(0)) // Проверяем, нажата ли левая кнопка мыши
+        //{
+        //    Shoot();
+        //}
         
     }
     public void MoveGun()
@@ -59,7 +55,7 @@ public class ShootScript : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         // Создаем снаряд
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);

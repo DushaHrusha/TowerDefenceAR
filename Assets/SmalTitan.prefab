@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4137446494741168117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8967910361161358262}
+  m_Layer: 0
+  m_Name: SmalTitan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8967910361161358262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137446494741168117}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1290.34, y: 4.423779, z: 20.337774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1206880909292296405}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7110139929393398528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8967910361161358262}
+    m_Modifications:
+    - target: {fileID: 3551079784125917656, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670569727525876407, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1677742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743784848729145711, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Titan Eren@Zombie Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743784848729145711, guid: 87d9581a1b3872141bae68ef66d351e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87d9581a1b3872141bae68ef66d351e6, type: 3}
+--- !u!4 &1206880909292296405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8220187879058562005, guid: 87d9581a1b3872141bae68ef66d351e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7110139929393398528}
+  m_PrefabAsset: {fileID: 0}

@@ -1,11 +1,17 @@
 using System.Collections;
 using UnityEngine;
-
+using System;
 public class SpawnScript : MonoBehaviour
 {
     public Transform[] spawnPointer;
-    public GameObject[] ball;
+    public GameObject[] enemy;
+    public GameObject WinPanel;
+    public Transform transformTower;
 
+    void Start()
+    {
+        StartGame() ;
+    }
     public void StartGame()
     {
         StartCoroutine(StartSpawnig());
@@ -18,14 +24,45 @@ public class SpawnScript : MonoBehaviour
     
     IEnumerator StartSpawnig()
     {
-        for (int j = 0; j < 4; j++)
+        var random = new System.Random();
+        int i = 6;
+        while(i > 0)
         {
-            yield return new WaitForSeconds(3f);
-            for (int i = 0; i < 3; i++)
+            for (int j = 0; j < spawnPointer.Length; j++)
             {
-                Instantiate(ball[i], spawnPointer[i].position, Quaternion.identity);
+                yield return new WaitForSeconds(random.Next(3,7));
+                GameObject init = Instantiate(enemy[random.Next(0,3)], spawnPointer[j].position, Quaternion.identity);
+                try
+                {
+                    init.GetComponent<Titan>().towerTransform = transformTower;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("нет такого компанента");
+                }
+                try
+                {
+                    init.GetComponent<СargoAirship>().towerTransform = transformTower;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("нет такого компанента");
+                }
+                try
+                {
+                    init.GetComponentInChildren<Titan>().towerTransform = transformTower;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("нет такого компанента");
+                }
+
             }
+            i--;
         }
+        
+        WinPanel.SetActive(true);
+        
         
     }
 }
