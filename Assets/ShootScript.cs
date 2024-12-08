@@ -18,10 +18,10 @@ public class ShootScript : MonoBehaviour
     private void Update()
     {
         MoveGun();
-        //if (Input.GetMouseButtonDown(0)) // Проверяем, нажата ли левая кнопка мыши
-        //{
-        //    Shoot();
-        //}
+        if (Input.GetMouseButtonDown(0)) // Проверяем, нажата ли левая кнопка мыши
+        {
+            Shoot();
+        }
         
     }
     public void MoveGun()

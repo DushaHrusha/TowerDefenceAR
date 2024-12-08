@@ -7,6 +7,10 @@ TagManager:
   - Manager
   - panelWood
   - Enemy
+  - Tower
+  - Titan
+  - Airship
+  - projecttile
   layers:
   - Default
   - TransparentFX

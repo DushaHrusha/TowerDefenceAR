@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZoneAttack : MonoBehaviour
 {
+    public EnemyHealth towerHealth;
    void OnTriggerEnter(Collider other)
    {
         if (other.gameObject.tag == "Titan")
@@ -14,6 +15,11 @@ public class ZoneAttack : MonoBehaviour
         if (other.gameObject.tag == "Airship")
         {
             other.GetComponent<СargoAirship>().Attak();
+        }
+
+        if (other.gameObject.tag == "projecttile")
+        {
+            towerHealth.TakeDamage(3);
         }
    }
 }
